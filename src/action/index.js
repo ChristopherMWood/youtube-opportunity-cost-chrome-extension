@@ -4,16 +4,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
         var activeTabId = activeTab.id;
 
         if (isYouTubeURL(activeTab.url)) {
+            document.getElementById("content").style.display = "block";
             const videoId = getVideoIdFromUrl(activeTab.url);
 
             chrome.storage.local.get([videoId], function(result) {
                 // alert('Value currently is ' + JSON.stringify(result[videoId].data));
                 setValuesInUI(result[videoId].data);
+                document.getElementById("site_link").href = "https://opportunitycost.life?v=" + videoId;
             });
+        } else {
+            document.getElementById("no-content").style.display = "block";
         }
-
      });
-     
 });
 
 function setValuesInUI(data) {
@@ -21,7 +23,7 @@ function setValuesInUI(data) {
     const yearsWatched = data.totalSeconds/31557600
     const averageLivesLost =  yearsWatched/averageLifeSpanInYears;
 
-    document.getElementById("lives_lost").innerHTML = averageLivesLost;
+    document.getElementById("lives-spent-digit").innerHTML = averageLivesLost.toPrecision(5);
 }
 
 const YouTubeUrlFormatOne = /^https?:\/\/(?:youtu\.be|(?:www\.)?youtube\.com\/embed)\/([\w\-]+)/;

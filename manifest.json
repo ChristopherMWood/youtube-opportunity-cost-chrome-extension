@@ -12,6 +12,10 @@
   "background": {
     "service_worker": "/src/background/background.js"
   },
+  "content_scripts": [{
+		"matches": [ "*://*.youtube.com/*" ],
+    "js": ["/src/action/index.js"]
+	}],
   "permissions": [
     "storage",
     "tabs"

@@ -1,0 +1,47 @@
+html, body {
+    height: 135px;
+    width: 200px;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: #040822;
+}
+
+#popup-title {
+    text-align: center;
+}
+
+#lives-spent-digit {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#lives-spent-text {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#link-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+a {
+    color: white;
+    text-align: center;
+    display: block;
+}
+
+#content {
+    display: none;
+}
+
+#no-content {
+    display: none;;
+    text-align: center;
+    padding: 5px;
+}
