@@ -1,2 +1,2 @@
-# youtube-opportunity-cost-chrome-extension
-A Chrome extension to calculate the opportunity cost in lives for any Youtube video you are currently viewing in the browser.
+## YouTube Opportunity Cost Chrome Extension
+This extension is a more lightweight form of the website https://opportunitycost.life (the repo of which is [here](https://github.com/ChristopherMWood/opportunitycost.life)).
