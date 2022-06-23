@@ -1,5 +1,5 @@
 html, body {
-    height: 135px;
+    height: 175px;
     width: 200px;
     margin: 0;
     padding: 0;
@@ -9,31 +9,18 @@ html, body {
 
 #popup-title {
     text-align: center;
-}
-
-#lives-spent-digit {
-    font-size: 40px;
-    font-weight: bold;
-    text-align: center;
-}
-
-#lives-spent-text {
-    font-size: 12px;
-    font-weight: bold;
-    text-align: center;
+    margin-bottom: 0px;
 }
 
 #link-container {
-    position: absolute;
     bottom: 0;
     width: 100%;
-    padding-bottom: 5px;
+    padding: 10px 0px;
+    text-align: center;
 }
 
 a {
     color: white;
-    text-align: center;
-    display: block;
 }
 
 #content {
@@ -44,4 +31,24 @@ a {
     display: none;;
     text-align: center;
     padding: 5px;
+}
+
+.slide_content {
+    height: 100%;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    flex-direction: column;
+}
+
+.slide_content div {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.slide_content span {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
 }
