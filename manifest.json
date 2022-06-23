@@ -1,8 +1,10 @@
 {
   "name": "Youtube Opportunity Cost",
+  "short_name": "Opportunity Cost",
   "description": "Calculates all of the lives wasted watching the YouTube video you are currently viewing in the browser.",
   "version": "1.0",
   "manifest_version": 3,
+  "offline_enabled": false,
   "icons": {
     "16": "./src/icons/icon16.png",
     "32": "./src/icons/icon32.png",
@@ -16,14 +18,8 @@
   "background": {
     "service_worker": "/src/background/background.js"
   },
-  "content_scripts": [{
-		"matches": [ "*://*.youtube.com/*" ],
-    "js": ["/src/action/index.js"]
-	}],
   "permissions": [
     "storage",
-    "tabs"
-  ],
-  "offline_enabled": false,
-  "short_name": "Opportunity Cost"
+    "webNavigation"
+  ]
 }
